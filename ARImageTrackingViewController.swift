@@ -191,7 +191,8 @@ class ARImageTrackingViewController: UIViewController {
             let textRect = CGRect(x: 0, y: size.height/2 - 150, width: size.width, height: 300)
             text.draw(in: textRect, withAttributes: attributes)
             
-            // Add some unique patterns for better tracking
+            // Add some unique patterns for better tracking (white: the fill colour was still the background colour)
+            UIColor.white.setFill()
             let patternSize: CGFloat = 50
             for i in 0..<4 {
                 for j in 0..<4 {
@@ -456,6 +457,7 @@ class MarkerGeneratorViewController: UIViewController {
             let textRect = CGRect(x: 0, y: size.height/2 - 150, width: size.width, height: 300)
             text.draw(in: textRect, withAttributes: attributes)
             
+            UIColor.white.setFill()
             let patternSize: CGFloat = 50
             for i in 0..<4 {
                 for j in 0..<4 {
