@@ -19,7 +19,7 @@ Standard photo capture with all camera controls.
 - Move slowly for better surface detection
 - Use textured surfaces (wooden tables work great)
 - Good lighting is essential
-- Objects have physics and will interact with surfaces
+- Objects have physics bodies (placed objects get dynamic physics bodies, but the detected planes have none, so objects currently fall through surfaces)
 
 ### 🖼 AR Image Tracking Mode
 
@@ -94,7 +94,7 @@ Standard photo capture with all camera controls.
 
 **App crashes or AR not available?**
 - Ensure device is iPhone 6s or later
-- Check iOS version is 13.0+
+- Check iOS version is 16.0+
 - Some features require newer devices
 
 ## Device Requirements

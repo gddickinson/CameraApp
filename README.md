@@ -49,13 +49,13 @@ CameraApp/
 │
 └── AR Image Tracking
     ├── ARImageTrackingViewController - Image detection and tracking
-    └── MarkerGeneratorViewController - Test marker generation
+    └── MarkerGeneratorViewController - Test marker generation (in ARImageTrackingViewController.swift)
 ```
 
 ## Requirements
 
-- iOS 13.0+
-- Xcode 12.0+
+- iOS 16.0+ (the code uses `ARPlaneAnchor.planeExtent`, iOS 16)
+- Xcode 14.0+
 - Physical iOS device with:
   - Camera (simulator not supported for camera features)
   - ARKit support (iPhone 6s or later for AR features)
@@ -121,7 +121,7 @@ Required permissions:
 2. **Place Objects**:
    - Select object type from bottom toolbar
    - Tap on detected surface to place
-   - Objects have physics - they'll interact with surfaces
+   - Objects have physics bodies (placed objects get dynamic physics bodies, but the detected planes have none, so objects currently fall through surfaces)
 
 3. **Remove Objects**:
    - Long press on any placed object to remove it
