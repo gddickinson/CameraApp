@@ -355,3 +355,26 @@ Sample project for educational purposes.
 ## Credits
 
 Built following Apple's best practices for AVFoundation and ARKit development.
+
+## Web showcase
+
+A browsable showcase of this app's source, with its AR marker drawing running in the browser:
+**https://gddickinson.github.io/CameraApp/** (published by `.github/workflows/pages.yml` on push to main).
+
+- **Code explorer**: every Swift file with its header summary, outline, search and syntax highlighting.
+- **How it works**: menu, capture session, plane detection/placement and image tracking, each claim linked to its line.
+- **Marker lab**: the three tracking markers drawn by a JS port of `createMarkerImage`, beside the same function
+  rendered by the real Swift code on a Mac (`scripts/make_swift_fixture.py`), with PNG download for printing.
+
+Run it locally:
+```bash
+pip install -r requirements-web.txt
+python run_web.py            # http://127.0.0.1:8265
+python -m pytest -q tests    # Swift checks run only on macOS with Xcode
+```
+
+| Home | Code explorer |
+|------|---------------|
+| ![Home](docs/img/home.png) | ![Code explorer](docs/img/code.png) |
+| **How it works** | **Marker lab** |
+| ![How it works](docs/img/how.png) | ![Marker lab](docs/img/demo.png) |
