@@ -66,10 +66,9 @@ class CameraManager: NSObject {
                 if self.captureSession.canAddOutput(self.photoOutput) {
                     self.captureSession.addOutput(self.photoOutput)
                     
-                    // Configure photo output settings
-                    if self.photoOutput.isHighResolutionCaptureEnabled {
-                        self.photoOutput.isHighResolutionCaptureEnabled = true
-                    }
+                    // Configure photo output settings: enable high-resolution capture (it is off by default;
+                    // the old check read the flag it was meant to set, so it never turned on)
+                    self.photoOutput.isHighResolutionCaptureEnabled = true
                 }
                 
                 // Add video data output for frame access (useful for AR)
